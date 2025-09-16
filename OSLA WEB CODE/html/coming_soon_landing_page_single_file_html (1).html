@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OSLA Collective — Coming Soon</title>
+  <meta name="description"
+    content="OSLA Collective — Entertainment incubator. Our full site is coming soon. Register your interest." />
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #14182b;
+      --text: #ffffff;
+      --muted: #b6bdd4;
+      --accent: #ff6f61;
+      /* Electric Coral */
+      --accent-2: #3f51b5;
+      /* Indigo Blue */
+      --accent-3: #00c896;
+      /* Bright Mint */
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(63, 81, 181, 0.3), transparent),
+        radial-gradient(1000px 600px at -10% 110%, rgba(0, 200, 150, 0.25), transparent),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 880px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.0));
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    header img.banner {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.2;
+      margin: 0;
+      letter-spacing: 0.4px;
+    }
+
+    .tag {
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .hero {
+      margin-top: 20px;
+      background: linear-gradient(135deg, rgba(255, 111, 97, 0.18), rgba(63, 81, 181, 0.20));
+      border: 1px dashed rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .hero h2 {
+      margin: 0 0 8px 0;
+      font-size: clamp(22px, 3.8vw, 28px);
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    @media (min-width: 820px) {
+      .grid {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    form {
+      background: #0e1324;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #0b0f1f;
+      color: var(--text);
+      outline: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #8891ad;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 540px) {
+      .row.two {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .radio-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .radio {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      background: #0b0f1f;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 14px;
+    }
+
+    button.cta {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border: 0;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .06s ease, box-shadow .2s ease;
+      box-shadow: 0 10px 24px rgba(63, 81, 181, 0.4);
+    }
+
+    button.cta:hover {
+      transform: translateY(-1px);
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: var(--accent-3);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+  <li><a href="index.html">Home</a></li>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <img src="../images/OSLA_AltA_Banner_dark.png" alt="OSLA Collective Banner" class="banner" />
+      </header>
+      <h1>OSLA Collective</h1>
+      <div class="tag">Entertainment incubator</div>
+      <div class="hero">
+        <h2>Our full site is coming soon</h2>
+        <p>We're building a new home for emerging film, music, and literature projects. In the meantime, leave your
+          details and tick the <strong>information radio button</strong> to receive an info pack and updates.</p>
+      </div>
+
+      <div class="grid">
+        <section>
+          <h3 style="margin: 0 0 10px 0;">Register your interest</h3>
+          <form name="interest" method="POST" data-netlify="true">
+            <div class="row two">
+              <div>
+                <label for="name">Your name</label>
+                <input id="name" name="name" placeholder="Alex Smith" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="alex@email.com" autocomplete="email"
+                  required />
+              </div>
+            </div>
+
+            <div style="margin-top: 6px;">
+              <label>Information request</label>
+              <div class="radio-group" role="radiogroup" aria-label="Request information?">
+                <label class="radio"><input type="radio" name="info" value="Yes" checked aria-label="Yes" /> <span>Yes —
+                    please email me the info pack</span></label>
+                <label class="radio"><input type="radio" name="info" value="No" aria-label="No" /> <span>No thanks —
+                    just keep me in the loop</span></label>
+              </div>
+            </div>
+
+            <div style="margin-top: 10px;">
+              <label for="message">Optional message</label>
+              <textarea id="message" name="message" rows="3"
+                placeholder="Tell us what you're most interested in…"></textarea>
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="cta">Send</button>
+            </div>
+            <div class="note">Submissions are securely sent to our inbox via Netlify Forms.</div>
+          </form>
+        </section>
+
+        <aside>
+          <h3 style="margin: 0 0 10px 0;">About</h3>
+          <p class="muted">OSLA Collective helps creators incubate, produce, and commercialise projects. We connect
+            talent with mentors, studios, and distribution.</p>
+          <ul class="muted" style="padding-left: 18px; margin-top: 8px;">
+            <li>Studios for film, music, and writing labs</li>
+            <li>Mentorship &amp; production support</li>
+            <li>Industry showcases &amp; partnerships</li>
+          </ul>
+          <div style="margin-top: 12px;">
+            <div class="muted">Contact: <a href="mailto:hello@oslacollective.com.au">hello@oslacollective.com.au</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        <div>© <span id="year"></span> OSLA Collective</div>
+        <div><a href="#" aria-label="Privacy policy (placeholder)">Privacy</a> · <a href="#"
+            aria-label="Terms (placeholder)">Terms</a></div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
